@@ -1,0 +1,6 @@
+#!/bin/zsh
+for letter in {a..z}
+do
+  curl 'https://api.wynncraft.com/public_api.php?action=itemDB&search='$letter > 'official-api-items/'$letter'.json'
+done
+
