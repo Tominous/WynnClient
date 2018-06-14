@@ -1,4 +1,14 @@
 #!/bin/zsh
+# Sticks all the items from the official api into the
+# official-api-items directory.
+
+# I imagine I'll be using this multiple times, so make the
+# directory only if it doesn't already exist
+mkdir -p official-api-items
+
+# The official Wynncraft API doesn't seem to let us request
+# all items at once, we have to go through alphabetically.
+# I don't think there are any non-alphabetical item names.
 for letter in {a..z}
 do
   curl 'https://api.wynncraft.com/public_api.php?action=itemDB&search='$letter > 'official-api-items/'$letter'.json'
