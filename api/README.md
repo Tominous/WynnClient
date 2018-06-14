@@ -1,4 +1,4 @@
-# api/
+# /api/
 
 I needed an online RESTful API which the client
 can use when trying to e.g. pre-identify items.
